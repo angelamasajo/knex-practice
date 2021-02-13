@@ -43,7 +43,7 @@ describe(`Shopping list object`, function() {
     })
   })
 
-  before (() => db('shopping_list').truncate())
+  before(() => db('shopping_list').truncate())
 
   afterEach(() => db('shopping_list').truncate())
 
@@ -100,8 +100,8 @@ describe(`Shopping list object`, function() {
         })
     })
 
-    if(`updateItem() updates an item in the 'shopping_list' table`, () => {
-      cont idOfItemToUpdate = 3;
+    it(`updateItem() updates an item in the 'shopping_list' table`, () => {
+      const idOfItemToUpdate = 3;
       const newItemData = {
         name: 'updated title',
         price: '99.99',
